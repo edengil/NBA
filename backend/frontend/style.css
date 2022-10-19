@@ -1,0 +1,54 @@
+.form-control { width:45% !important; }
+#srch-term1 { margin-right:5px }
+.btn { margin-left:-35px !important; }
+
+body{
+    background-color:hsl(0, 0%, 90%) !important;
+}
+.sec-box{
+    width: 80%;
+    height: 100px;
+
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: 1px 1px 3px #363941;
+
+}
+
+.my_name{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1vmax;
+    padding: 1vw;
+    font-size: 1vmax;
+}
+
+
+/* min-width: 350px; */
+/* min-height: 350px; */
+/* .box{
+    width: 100%;
+    height: 350px;
+
+    background-color: orange;
+    box-shadow: 1px 1px 3px #363941;
+} */
+    .grid-container{
+    display: grid;
+    grid-template-areas:
+      'form-control form-control input-group-btn '
+      'box box box ';
+      gap: 50px;
+      padding: 10px;
+      align-content: center;
+      font-size: 3em;
+      color: rgb(0, 0, 0);
+      /* cursor: alias; */
+    }
+    .grid-container2{
+        
+        display: grid;
+        grid-template-areas:
+        'inputt inputt inputt';
+        padding: 10px;
+        align-content: center;
+      /* cursor: alias; */
+    }

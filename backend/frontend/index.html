@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery101</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="frontend\style.css" />
+  </head>
+
+  <body>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+          <div class="input-group add-on">
+              <input class="form-control team" placeholder="TEAM NAME"  name="srch-term" id="srch-term1" type="text">
+              <input class="form-control year" placeholder="YEAR" name="srch-term" id="srch-term2" type="text">
+              <div class="input-group-btn">
+                  <button class="generate-user btn btn-default" type="submit">GET TEAM  <i class="glyphicon glyphicon-search"></i></button>    
+              </div>      
+          </div>
+
+              <div class="grid-container2">
+
+                <div class="inputt"  >As Birthday
+                  <input type="checkbox" class="accept" name="AsBirthday" value="AsBirthday">
+                </div>
+                
+                <div class="inputt"  >
+                  <button class="btn-dream-team btn btn-default" type="submit">My Dream Team  </button>    
+                </div>
+                
+                <div class="inputt"  >
+                  <button class="submit-stat btn btn-default" type="submit">Player Stats  </button>   
+                  <input class="first-player-name" placeholder="Player First Name" name="srch-term" id="PLYER" type="text">
+                  <input class="last-player-name" placeholder="Player Last Name" name="srch-term" id="PLYER" type="text">
+                </div>
+                
+              </div>
+
+              
+        <script id="kanye-template" type="text/x-handlebars-template">
+          <div class="grid-container">
+          {{#each this}}
+
+            <div class="card text-bg-warning text-center ">
+              <div class="card-img">
+                <div class="card-body" id='{{personId}}'>
+                  <h4 class="card-title ">{{firstName}} {{lastName}}</h4>
+                  <h4 class="card-title ">{{jersey}}</h4>
+                  <img src='{{picture}}' class="card-img" alt="" onerror="if (this.src != 'Sorry, that player was not found. Please check the spelling.') this.src = '/frontend/defult.webp';" class="card-img-top image-max">
+                  <h4 class="card-title ">{{pos}}</h4>
+                  <button class="add_dream_team btn btn-default" type="submit">Add to Dream Team</button>   
+                  <div></div>
+                  <button class="remove-from-dream-team btn btn-default" type="submit">Remove from Dream Team</button>   
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </script>
+      <script id="statistic-template" type="text/x-handlebars-template">
+        <div class="card-header">
+          Statistic
+        </div><div>
+            <div class="list-group-item">Games played {{games_played}}</div>
+            <div class="list-group-item">Minutes per game {{minutes_per_game}}</div>
+            <div class="list-group-item">Field goals attempted per game {{field_goals_attempted_per_game}}</div>
+            <div class="list-group-item">Field goals made per game {{field_goals_made_per_game}}</div>
+            <div class="list-group-item">Field goal percentage {{field_goal_percentage}}</div>
+        </div>
+      </script>
+      <div class="quote-container2"></div>	
+      <div class="quote-container"></div>	
+  
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="frontend\DataModel.js"></script>
+    <script src="frontend\Renderer.js"></script>
+    <script src="frontend\Controller.js"></script>
+
+  </body>
+</html>
